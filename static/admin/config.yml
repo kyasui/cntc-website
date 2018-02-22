@@ -18,6 +18,18 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "screenings"
+    label: "Screenings"
+    folder: "src/pages/screenings"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "screening"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Venue", name: "venue", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Poser", name: poster, widget: image}
 
   - name: "pages"
     label: "Pages"
