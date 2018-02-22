@@ -29,7 +29,8 @@ collections:
       - {label: "Venue", name: "venue", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Poser", name: poster, widget: image, required: false}
+      - {label: "Link", name: link, widget: "string", required: false}
+      - {label: "Poster", name: poster, widget: "image", required: false}
 
   - name: "pages"
     label: "Pages"
