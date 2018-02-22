@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.nav-wrap {
+  mix-blend-mode: exclude;
+  a {
+    position: relative;
+    z-index: 1;
+    &:after {
+      content: "";
+      height: 3px;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 3px;
+      background: $blue;
+      opacity: 0.0;
+      transition: all 0.2s;
+    }
+  }
+
+  a.is-active,
+  a:hover {
+    &:after {
+      content: "";
+      opacity: 1.0;
+      // transform: scaleY(1) rotate(7deg);
+    }
+  }
+}

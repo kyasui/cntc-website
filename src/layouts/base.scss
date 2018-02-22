@@ -1,0 +1,84 @@
+@import "~tachyons/css/tachyons.css";
+@import './variables.scss';
+
+body {
+  font-family: 'Authentic Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fluid-width {
+  max-width: 1120px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1;
+  padding: 22px 25px 18px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.blue-button {
+  background-color: $blue;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.modal {
+  .modal-bg {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  .close-modal {
+    transform: translateY(15px);
+    opacity: 0;
+    transition: all 0.2s;
+    fill: $white;
+  }
+
+  .modal-content {
+    transform: translateY(15px);
+    opacity: 0;
+    transition: all 0.2s;
+    max-width: 1024px;
+    width: 100%;
+  }
+
+  &.is-active {
+    .modal-bg {
+      opacity: 1;
+    }
+
+    .modal-content,
+    .close-modal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

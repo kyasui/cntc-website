@@ -1,0 +1,15 @@
+<svg width="18" height="18" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" transform="translate(-15383 -503)">
+<g id="Group 5">
+<g id="Line">
+<use xlink:href="#path0_stroke" transform="matrix(0.707107 -0.707107 0.707107 0.707107 15384.5 520.749)"/>
+</g>
+<g id="Line">
+<use xlink:href="#path0_stroke" transform="matrix(-0.707107 -0.707107 0.707107 -0.707107 15400.7 520.042)"/>
+</g>
+</g>
+</g>
+<defs>
+<path fill="#ffffff" id="path0_stroke" d="M 0.5 -1C 0.223858 -1 0 -0.776142 0 -0.5C 0 -0.223858 0.223858 0 0.5 0L 0.5 -1ZM 22.5 0C 22.7761 0 23 -0.223858 23 -0.5C 23 -0.776142 22.7761 -1 22.5 -1L 22.5 0ZM 0.5 0L 22.5 0L 22.5 -1L 0.5 -1L 0.5 0Z"/>
+</defs>
+</svg>

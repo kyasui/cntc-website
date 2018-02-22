@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Careful Not to Cry | A Film by Erik Sutch',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
