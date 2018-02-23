@@ -1,7 +1,8 @@
 @import './variables.scss';
 
 .nav-wrap {
-  mix-blend-mode: exclude;
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform;
   a {
     position: relative;
     z-index: 1;
@@ -12,10 +13,11 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 3px;
+      bottom: -5px;
       background: $blue;
       opacity: 0.0;
       transition: all 0.2s;
+      // mix-blend-mode: exclude;
     }
   }
 
@@ -23,8 +25,28 @@
   a:hover {
     &:after {
       content: "";
-      opacity: 1.0;
+      opacity: 0.4;
       // transform: scaleY(1) rotate(7deg);
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0.0;
+    background: rgba(0,0,0,0.9);
+    // transform: translateY(-100%);
+    transition: all 0.2s;
+  }
+
+  .solid & {
+    &:after {
+      opacity: 1.0;
+      // transform: translateY(0%);
     }
   }
 }

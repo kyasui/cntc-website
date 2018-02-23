@@ -10,14 +10,19 @@ import './fonts.scss';
 import './nav.scss';
 import './footer.scss';
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
-    <Navbar />
-    <div>{children()}</div>
-    <Footer />
-  </div>
-);
+
+class TemplateWrapper extends React.Component {
+  render() {
+    let pageClass = (this.props.location.pathname !== '/') ? this.props.location.pathname.substring(1) : 'home';
+    let navClass = (this.props.location.pathname !== '/') ? 'solid' : '';
+    return(<div className={`${pageClass} ${navClass}`}>
+      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Navbar />
+      {this.props.children()}
+      <Footer />
+    </div>);
+  }
+};
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

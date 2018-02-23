@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link, withPrefix } from "gatsby-link";
 import Script from "react-load-script";
 import ReactDOM from 'react-dom';
 import graphql from "graphql";
@@ -30,22 +30,37 @@ export default class IndexPage extends React.Component {
     window.netlifyIdentity.init();
   }
 
+  componentDidMount() {
+    requestAnimationFrame(() => {
+      this.setState({
+        trigger: true,
+      });
+    });
+  }
+
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    console.log('render', this.props)
 
     return (
       <section className="section">
-        <div className="aspect-ratio aspect-ratio--16x9 relative z-0">
-          <div 
-            style={{ background: 'url(http://mrmrs.github.io/photos/001.jpg) center' }}
-            className="aspect-ratio--object cover z-1"></div>
-          <div className="fluid-width absolute  absolute--fill center flex items-center content-center justify-start z-2">
+        <div className="aspect-ratio aspect-ratio--16x9 relative z-0 bg-black">
+          <div className={"aspect-ratio--object z-1 overflow-hidden splash-video"  + (this.state.trigger ? ' is-active' : '')}>
+            <div className="bg-black-40 absolute--fill absolute z-2"></div>
+            <video
+              className="of-cover z-1 relative"
+              playsInline
+              autoPlay
+              muted
+              loop>
+              <source src={withPrefix('/video/landing.mp4')} type="video/mp4" />
+            </video>
+          </div>
+          <div className="fluid-width absolute absolute--fill center flex items-center content-center justify-start-l justify-center z-2 tc tl-l">
             <div>
-              <h1 className="f-subheadline lh-solid white mt4">Careful<br />
+              <h1 className="f-subheadline-l f2 lh-solid white mt4">Careful<br />
               Not to Cry</h1>
-              <p className="f4 lh-copy ma0 white mt2">A Film by Erik Sutch</p>
+              <p className="f4-l f5 lh-copy ma0 white mt2">A Film by Erik Sutch</p>
               <button className="button blue-button ttu mt4 bn pointer" onClick={this.toggleVideoOverlay}>Watch Trailer</button>
             </div>
           </div>
@@ -65,7 +80,7 @@ export default class IndexPage extends React.Component {
           <div className="fluid-width center">
             <h2 className="f3 lh-title">Upcoming Screenings</h2>
           </div>
-          {posts
+          {/*posts
             .filter(post => post.node.frontmatter.templateKey === "blog-post")
             .map(({ node: post }) => (
               <div
@@ -89,7 +104,7 @@ export default class IndexPage extends React.Component {
                   </Link>
                 </p>
               </div>
-            ))}
+            ))*/}
         </div>
       </section>
     );
