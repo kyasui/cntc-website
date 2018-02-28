@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import github from '../img/github-icon.svg';
-import logo from '../img/logo.svg';
-
 const Footer = () => (
   <div className="footer-wrap pv3">
     <div className="flex items-center content-center justify-between fluid-width center">

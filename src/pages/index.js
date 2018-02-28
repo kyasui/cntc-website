@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import graphql from "graphql";
 
 import Modal from '../components/Modal';
+import Credits from '../components/Credits';
 import { format, compareAsc } from "date-fns";
 
 export default class IndexPage extends React.Component {
@@ -119,26 +120,7 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
 
-          <div className="flex-l items-start content-start justify-between mt5">
-            <div className="w-100 w-30-l pa5-l flex-l items-start content-start justify-end">
-              <p className="lh-copy black f3 dib section-title mb4 mb0-l">Credits</p>
-            </div>
-            <div className="w-100 w-70-l pa5-l">
-              <p className="lh-copy black f3 mb4">Meka Butler, Sé Marie, Suzanne Sadler, and Linda Kanyarusoke were the primary actors.</p>
-
-              <p className="lh-copy black f3 mb4">Russell Hawkins, Dan McCurry, Sarah Brunner, Bruce Crocker, and Matthew Wallenstein were the secondary actors.</p>
-
-              <p className="lh-copy black f3 mb4">Jacob Gross was the producer.</p>
-
-              <p className="lh-copy black f3 mb4">Danielle Calodney was the director of photography. </p>
-
-              <p className="lh-copy black f3 mb4">Matt Fletcher composed the music. </p>
-
-              <p className="lh-copy black f3 mb4">With additional music from Julius Eastman, Shin Joong Hyun, Josef Leimberg, and Moses Sumney. </p>
-
-              <p className="lh-copy black f3 mb4">Shawn Petersen was the financier.</p>
-            </div>
-          </div>
+          <Credits />
 
         </div>
       </section>

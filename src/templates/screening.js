@@ -43,14 +43,16 @@ export default ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query ScreeningsByPath($path: String!) {
+  query ScreeningByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         path
         date(formatString: "MMMM DD, YYYY")
-        title
-        description
+        venue
+        location
+        link
+        poster
       }
     }
   }
