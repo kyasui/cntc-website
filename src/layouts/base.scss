@@ -96,3 +96,35 @@ a {
     opacity: 1.0;
   }
 }
+
+.section-title {
+  position: relative;
+
+  &:after {
+    content: "";
+    height: 3px;
+    background: $blue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+
+
+  }
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.text-area {
+  min-height: 250px;
+}
+
+.min-h {
+  min-height: 82vh;
+}
+
+.image-column {
+  width: 48%;
+}

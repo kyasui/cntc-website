@@ -38,7 +38,7 @@ class Modal extends React.Component {
         <div className="modal-content z-9999">
           {this.props.children}
         </div>
-        <div className="modal-bg absolute absolute--fill bg-black-60 z-999"></div>
+        <div className="modal-bg absolute absolute--fill bg-black-80 z-999"></div>
       </div>
     );
   }

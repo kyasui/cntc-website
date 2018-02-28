@@ -92,7 +92,7 @@ export const ProductPageTemplate = ({
 );
 
 export default ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data && data.markdownRemark;
 
   return (
     <ProductPageTemplate

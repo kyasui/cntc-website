@@ -10,19 +10,19 @@ const Navbar = () => (
       <Link
         exact
         activeClassName="is-active"
-        className="f5 white mr3-l mv3-l mb3" to="/">Home</Link>
+        className="f5 white mr3-l mv3" to="/">Home</Link>
       <Link
         activeClassName="is-active"
-        className="f5 white mh3-l mv3-l mb3" to="/about">About</Link>
+        className="f5 white mh3-l mv3" to="/about">About</Link>
       <Link
         activeClassName="is-active"
-        className="f5 white mh3-l mv3-l mb3" to="/screenings">Screenings</Link>
+        className="f5 white mh3-l mv3" to="/screenings">Screenings</Link>
       <Link
         activeClassName="is-active"
-        className="f5 white mh3-l mv3-l mb3" to="/photos">Photos</Link>
+        className="f5 white mh3-l mv3" to="/photos">Photos</Link>
       <Link
         activeClassName="is-active"
-        className="f5 white ml3-l mv3-l mb3" to="/contact">Contact</Link>
+        className="f5 white ml3-l mv3" to="/contact">Contact</Link>
     </nav>
   </div>
 );

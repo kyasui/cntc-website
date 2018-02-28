@@ -38,15 +38,18 @@
     bottom: 0;
     top: 0;
     opacity: 0.0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.75);
     // transform: translateY(-100%);
     transition: all 0.2s;
   }
 
   .solid & {
-    &:after {
-      opacity: 1.0;
-      // transform: translateY(0%);
+    // &:after {
+    //   opacity: 1.0;
+    //   // transform: translateY(0%);
+    // }
+    a {
+      color: #000;
     }
   }
 }
