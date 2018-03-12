@@ -2,7 +2,7 @@
 templateKey: screening
 path: petworth-library
 venue: Petworth Library
-location: 'Vero Beach, FL'
-date: 2017-10-13T22:27:11-07:00
+location: 'Washington, DC'
+date: 2017-12-12T22:27:11-08:00
 ---
 
