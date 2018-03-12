@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { withPrefix } from "gatsby-link";
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -22,6 +23,7 @@ class TemplateWrapper extends React.Component {
         <meta property="og:site_name" content="Careful Not to Cry" />
 
         <link rel="canonical" href="https://carefulnottocry.com" />
+        <link rel="shortcut icon" type="image/x-icon" href={withPrefix('/img/favicon.ico')} />
         <meta
           property="og:description"
           content="Careful Not to Cry is the feature debut of writer/director Erik Sutch."
@@ -33,7 +35,7 @@ class TemplateWrapper extends React.Component {
         <meta property="og:title" content="Careful Not to Cry | A Film by Erik Sutch" />
         <meta property="og:url" content="https://carefulnottocry.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content={withPrefix('/img/share-image.png')} />
       </Helmet>
       <Navbar />
       {this.props.children()}
