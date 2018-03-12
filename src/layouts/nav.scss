@@ -25,8 +25,7 @@
   a:hover {
     &:after {
       content: "";
-      opacity: 0.4;
-      // transform: scaleY(1) rotate(7deg);
+      opacity: 1.0;
     }
   }
 

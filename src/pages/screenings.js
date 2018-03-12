@@ -3,6 +3,7 @@ import { Link, withPrefix } from "gatsby-link";
 import Script from "react-load-script";
 import ReactDOM from 'react-dom';
 import graphql from "graphql";
+import Helmet from 'react-helmet';
 
 import { format, compareAsc } from "date-fns";
 
@@ -32,37 +33,43 @@ export default class ScreeningsPage extends React.Component {
         screeningDate
       );
 
-      return (post.node.frontmatter.templateKey === "blog-post" && isScreeningDateInFuture);
+      return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture);
     });
 
     console.log(futureScreenings.length, pastScreenings.length);
 
     return (
-      <section className="pv3 mv5 min-h">
-        <div className="container pv5">
+      <section className="section mv5 pv5">
+        <div className="flex items-center content-center justify-center">
+          <h1 className="lh-copy black f2 tc mt5 section-title dib center mb4">Screenings</h1>
+        </div>
+        <Helmet>
+          <title>Careful Not to Cry | Screenings</title>
+        </Helmet>
+        <div className="container pv5 pl5-l">
           <div className="fluid-width center mb5 pb5 cf">
-            <h3 className="lh-copy black f2 mt5 section-title dib mb4">Upcoming</h3>
+            <h3 className="lh-copy black-80 f2 mt5 dib mb4">Upcoming</h3>
             <div className="mv5 pv5">
               {futureScreenings.length ? futureScreenings.map(({ node: post }, index) => {
                   return(<div key={`screening-${index}`} className="screening mb5 tl">
-                    <h4 className="lh-copy black f7">{post.frontmatter.date}</h4>
-                    <h2 className="lh-copy black f3">{post.frontmatter.date}</h2>
-                    <h3 className="lh-copy black f7">{post.frontmatter.date}</h3>
-                    {post.frontmatter.date ? (<a className="lh-copy white-90 f7 mt3 dib ttu" target="_blank" href="">View Info →</a>) : null}
+                    <h4 className="lh-copy black f7">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</h4>
+                    <h2 className="lh-copy black f3">{post.frontmatter.venue}</h2>
+                    <h3 className="lh-copy black f7">{post.frontmatter.location}</h3>
+                    {post.frontmatter.link ? (<a className="lh-copy black-90 f7 mt3 dib ttu" target="_blank" href={post.frontmatter.link}>View Info →</a>) : null}
                   </div>);
                 }) : (<h4 className="black-50 f4">None At This Time</h4>)}
             </div>
           </div>
 
           <div className="fluid-width center">
-            <h3 className="lh-copy black f2 mt5 section-title dib">Past</h3>
+            <h3 className="lh-copy black-80 f2 mt5 dib">Past</h3>
             <div className="mv5 pv5">
               {pastScreenings.length ? pastScreenings.map(({ node: post }, index) => {
                   return(<div key={`screening-${index}`} className="screening mb5 tl">
-                    <h4 className="lh-copy black f7">{post.frontmatter.date}</h4>
-                    <h2 className="lh-copy black f3">{post.frontmatter.date}</h2>
-                    <h3 className="lh-copy black f7">{post.frontmatter.date}</h3>
-                    {post.frontmatter.date ? (<a className="lh-copy white-90 f7 mt3 dib ttu" target="_blank" href="">View Info →</a>) : null}
+                    <h4 className="lh-copy black f7">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</h4>
+                    <h2 className="lh-copy black f3">{post.frontmatter.venue}</h2>
+                    <h3 className="lh-copy black f7">{post.frontmatter.location}</h3>
+                    {post.frontmatter.link ? (<a className="lh-copy black-90 f7 mt3 dib ttu" target="_blank" href={post.frontmatter.link}>View Info →</a>) : null}
                   </div>);
                 }) : (<h1>NOTHING UPCOMING</h1>)}
             </div>
@@ -85,6 +92,10 @@ export const pageQuery = graphql`
             templateKey
             date(formatString: "MMMM DD, YYYY")
             path
+            venue
+            location
+            link
+            poster
           }
         }
       }

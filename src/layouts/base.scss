@@ -128,3 +128,44 @@ a {
 .image-column {
   width: 48%;
 }
+
+.img-preload {
+  opacity: 0.0;
+  transition: all 0.2s;
+  &.is-loaded {
+    opacity: 1.0;
+  }
+}
+
+.aspect-ratio--img {
+  padding-bottom: 41.7%;
+}
+
+.credits-section {
+  a,
+  a:visited {
+    color: $blue;
+  }
+
+  a {
+    position: relative;
+    &:hover {
+      &:after {
+        content: "";
+        position: absolute;
+        background: $blue;
+        right: 0;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        z-index: -1;
+      }
+
+    }
+  }
+}
+
+.label {
+  font-size: 14px;
+  opacity: 0.6;
+}

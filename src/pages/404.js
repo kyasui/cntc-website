@@ -1,10 +1,16 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  <section className="pv3 mt5 min-h bg-blue">
+    <Helmet>
+      <title>Careful Not to Cry | Contact</title>
+    </Helmet>
+    <div className="fluid-width w-100 center mv5 min-h">
+      <h1 className="white f1 lh-title">NOT FOUND</h1>
+      <p className="white f4 lh-copy">Not sure about this one.</p>
+    </div>
+  </section>
 );
 
 export default NotFoundPage;

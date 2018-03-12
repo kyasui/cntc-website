@@ -16,7 +16,25 @@ class TemplateWrapper extends React.Component {
     let pageClass = (this.props.location.pathname !== '/') ? this.props.location.pathname.substring(1) : 'home';
     let navClass = (this.props.location.pathname !== '/') ? 'solid' : '';
     return(<div className={`${pageClass} ${navClass}`}>
-      <Helmet title="Home | Gatsby + Netlify CMS" />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Careful Not to Cry | A Film by Erik Sutch</title>
+        <meta property="og:site_name" content="Careful Not to Cry" />
+
+        <link rel="canonical" href="https://carefulnottocry.com" />
+        <meta
+          property="og:description"
+          content="Careful Not to Cry is the feature debut of writer/director Erik Sutch."
+        />
+        <meta
+          name="description"
+          content="Careful Not to Cry is the feature debut of writer/director Erik Sutch.."
+        />
+        <meta property="og:title" content="Careful Not to Cry | A Film by Erik Sutch" />
+        <meta property="og:url" content="https://carefulnottocry.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
+      </Helmet>
       <Navbar />
       {this.props.children()}
       <Footer />

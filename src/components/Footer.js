@@ -11,7 +11,7 @@ const Footer = () => (
       </div>
 
       <div className="credits">
-        <a className="white f5 mr3" target="_blank" href="">&copy; 2018</a>
+        <a className="white f5 mr3 tracked-tight" target="_blank" href="">&copy; 2018</a>
       </div>
     </div>
   </div>

@@ -5,7 +5,9 @@ import ReactDOM from 'react-dom';
 import graphql from "graphql";
 
 import Modal from '../components/Modal';
+import Synopsis from '../components/Synopsis';
 import Credits from '../components/Credits';
+import Video from '../components/Video';
 import { format, compareAsc } from "date-fns";
 
 export default class IndexPage extends React.Component {
@@ -32,14 +34,6 @@ export default class IndexPage extends React.Component {
     window.netlifyIdentity.init();
   }
 
-  componentDidMount() {
-    requestAnimationFrame(() => {
-      this.setState({
-        trigger: true,
-      });
-    });
-  }
-
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -53,36 +47,26 @@ export default class IndexPage extends React.Component {
         screeningDate
       );
 
-      return (post.node.frontmatter.templateKey === "blog-post" && !isScreeningDateInFuture);
+      return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture === 1);
     });
 
     return (
       <section className="section">
         <div className="vh-100 relative z-0 bg-black">
-          <div className={"aspect-ratio--object z-1 overflow-hidden splash-video"  + (this.state.trigger ? ' is-active' : '')}>
-            <div className="bg-black-40 absolute--fill absolute z-2"></div>
-            <video
-              className="of-cover z-1 relative"
-              playsInline
-              autoPlay
-              muted
-              loop>
-              <source src={withPrefix('/video/landing.mp4')} type="video/mp4" />
-            </video>
-          </div>
+          <Video />
           <div className="fluid-width absolute absolute--fill center flex items-center content-center justify-start-l justify-center z-2 tc tl-l">
             <div>
               <h1 className="f-subheadline-l f1 lh-solid white mt4">Careful<br />
               Not to Cry</h1>
               <p className="f4-l f5 lh-copy ma0 white mt2">A Film by Erik Sutch</p>
-              <button className="button blue-button ttu mt4 bn pointer" onClick={this.toggleVideoOverlay}>Watch Trailer</button>
+              <button className="button blue-button mt4 bn pointer" onClick={this.toggleVideoOverlay}>Watch Trailer</button>
             </div>
           </div>
         </div>
         {this.state.shouldShowVideoOverlay ? (
           <Modal toggleModal={this.toggleVideoOverlay}>
             <div className="aspect-ratio aspect-ratio--16x9 relative w-100 mw8 center z-9999">
-              <iframe className="aspect-ratio--object" src="https://www.youtube.com/embed/um7GsPmlrFU" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+              <iframe className="aspect-ratio--object" src="https://www.youtube.com/embed/f8hbWs2tm8I" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
             </div>
           </Modal>
         ) : null}
@@ -97,11 +81,11 @@ export default class IndexPage extends React.Component {
             <div className="flex items-start content-start justify-center mv5">
               <div className="mw7 center pa5">
                 {futureScreenings.length ? futureScreenings.map(({ node: post }, index) => {
-                  return(<div key={`screening-${index}`} className="screening mb5">
-                    <h4 className="lh-copy black f7">{post.frontmatter.date}</h4>
-                    <h2 className="lh-copy black f3">{post.frontmatter.date}</h2>
-                    <h3 className="lh-copy black f7">{post.frontmatter.date}</h3>
-                    {post.frontmatter.date ? (<a className="lh-copy white-90 f7 mt3 dib ttu" target="_blank" href="">View Info →</a>) : null}
+                  return(<div key={`future-screening-${index}`} className="screening mb5">
+                    <h4 className="lh-copy white f7">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</h4>
+                    <h2 className="lh-copy white f3">{post.frontmatter.venue}</h2>
+                    <h3 className="lh-copy white f7">{post.frontmatter.location}</h3>
+                    {post.frontmatter.link ? (<a className="lh-copy white-90 f7 mt3 dib ttu" target="_blank" href={post.frontmatter.link}>View Info →</a>) : null}
                   </div>);
                 }) : (<h4 className="white-50 f4 tc">None At This Time</h4>)}
 
@@ -110,16 +94,7 @@ export default class IndexPage extends React.Component {
           </div>
         </div>
         <div className="fluid-width center">
-
-          <div className="flex-l items-start content-start justify-between mt5">
-            <div className="w-100 w-30-l pa5-l flex-l items-start content-start justify-end">
-              <p className="lh-copy black f3 dib section-title mb4 mb0-l">Synopsis</p>
-            </div>
-            <div className="w-100 w-70-l pa5-l">
-              <p className="lh-copy black f3">It is about an abortion doctor whose clinic has been temporarily shut down by restrictive state laws and how she spends her days driving a taxi cab until it reopens.</p>
-            </div>
-          </div>
-
+          <Synopsis />
           <Credits />
 
         </div>
@@ -140,6 +115,10 @@ export const pageQuery = graphql`
             templateKey
             date(formatString: "MMMM DD, YYYY")
             path
+            venue
+            location
+            link
+            poster
           }
         }
       }
