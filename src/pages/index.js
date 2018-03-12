@@ -43,8 +43,8 @@ export default class IndexPage extends React.Component {
       let screeningDate = new Date(post.node.frontmatter.date);
 
       let isScreeningDateInFuture = compareAsc(
-        today,
-        screeningDate
+        screeningDate,
+        today
       );
 
       return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture === 1);

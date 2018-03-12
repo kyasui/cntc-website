@@ -17,11 +17,11 @@ export default class ScreeningsPage extends React.Component {
       let screeningDate = new Date(post.node.frontmatter.date);
 
       let isScreeningDateInFuture = compareAsc(
-        today,
-        screeningDate
+        screeningDate,
+        today
       );
 
-      return (post.node.frontmatter.templateKey === "blog-post" && !isScreeningDateInFuture);
+      return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture === 1);
     });
 
     let pastScreenings = posts.filter(post => {
@@ -29,11 +29,11 @@ export default class ScreeningsPage extends React.Component {
       let screeningDate = new Date(post.node.frontmatter.date);
 
       let isScreeningDateInFuture = compareAsc(
-        today,
-        screeningDate
+        screeningDate,
+        today
       );
 
-      return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture);
+      return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture !== 1);
     });
 
     console.log(futureScreenings.length, pastScreenings.length);
@@ -48,8 +48,8 @@ export default class ScreeningsPage extends React.Component {
         </Helmet>
         <div className="container pv5 pl5-l">
           <div className="fluid-width center mb5 pb5 cf">
-            <h3 className="lh-copy black-80 f2 mt5 dib mb4">Upcoming</h3>
-            <div className="mv5 pv5">
+            <h3 className="lh-copy black-80 f3 mt5 dib mb0 o-50">Upcoming</h3>
+            <div className="mb5 pv5">
               {futureScreenings.length ? futureScreenings.map(({ node: post }, index) => {
                   return(<div key={`screening-${index}`} className="screening mb5 tl">
                     <h4 className="lh-copy black f7">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</h4>
@@ -62,8 +62,8 @@ export default class ScreeningsPage extends React.Component {
           </div>
 
           <div className="fluid-width center">
-            <h3 className="lh-copy black-80 f2 mt5 dib">Past</h3>
-            <div className="mv5 pv5">
+            <h3 className="lh-copy black-80 f3 mt5 dib o-50">Past</h3>
+            <div className="mb5 pv5">
               {pastScreenings.length ? pastScreenings.map(({ node: post }, index) => {
                   return(<div key={`screening-${index}`} className="screening mb5 tl">
                     <h4 className="lh-copy black f7">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</h4>
