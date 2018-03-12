@@ -8,7 +8,7 @@ import Credits from '../components/Credits';
 import LazyLoad from 'react-lazyload';
 import Img from '../components/Img';
 
-export default class About extends React.Component {
+export default class AboutPage extends React.Component {
   render() {
     return (
       <section className="section mv5 pv5">
@@ -64,14 +64,3 @@ export default class About extends React.Component {
   }
 };
 
-export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        title
-      }
-    }
-  }
-`;

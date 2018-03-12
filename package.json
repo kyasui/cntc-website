@@ -5,7 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "date-fns": "^1.29.0",
-    "gatsby": "^1.9.63",
+    "gatsby": "^1.9.231",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-netlify-cms": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.5",
@@ -36,6 +36,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.7.4"
   }
 }

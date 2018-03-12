@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import graphql from "graphql";
 import Helmet from 'react-helmet';
 
-export default class ScreeningsPage extends React.Component {
+export default class ContactPage extends React.Component {
   render() {
     let thanks = 'http://localhost:8000/contact?success'
     return (
@@ -44,22 +44,3 @@ export default class ScreeningsPage extends React.Component {
     );
   }
 }
-
-export const pageQuery = graphql`
-  query ContactPageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`;

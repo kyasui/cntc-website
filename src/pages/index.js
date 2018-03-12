@@ -110,18 +110,19 @@ export const pageQuery = graphql`
         node {
           excerpt(pruneLength: 400)
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            path
-            venue
             location
+            venue
             link
-            poster
           }
         }
       }
     }
   }
-`;
+`

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { withPrefix } from "gatsby-link";
+import { withPrefix } from 'gatsby-link';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';

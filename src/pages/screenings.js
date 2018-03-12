@@ -36,8 +36,6 @@ export default class ScreeningsPage extends React.Component {
       return (post.node.frontmatter.templateKey === "screening" && isScreeningDateInFuture !== 1);
     });
 
-    console.log(futureScreenings.length, pastScreenings.length);
-
     return (
       <section className="section mv5 pv5">
         <div className="flex items-center content-center justify-center">
@@ -91,11 +89,9 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            path
-            venue
             location
+            venue
             link
-            poster
           }
         }
       }

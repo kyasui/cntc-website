@@ -8,7 +8,6 @@ class Video extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.video);
     this.video.oncanplay = () => {
       this.video.play();
       this.setState({
