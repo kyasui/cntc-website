@@ -23,7 +23,7 @@ export default class ContactPage extends React.Component {
                 <div className="flex items-center content-center justify-center">
                   <h1 className="lh-copy black f2 tc mt5 section-title dib center mb4">Contact</h1>
                 </div>,
-                <form action="https://formspree.io/yasui.kei@gmail.com" method="POST">
+                <form action="https://formspree.io/eriksutch@gmail.com" method="POST">
                   <div className="mv3">
                     <input className="pa3 f4 br1 bn w-100 bg-black-10" type="text" name="name" placeholder="Your Name" />
                   </div>
