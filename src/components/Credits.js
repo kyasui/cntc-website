@@ -7,15 +7,15 @@ const Credits = () => (
       <p className="lh-copy black f3 dib section-title mb4 mb0-l">Cast</p>
     </div>
     <div className="w-100 w-70-l pa5-l">
-      <p className="lh-copy black f3 mb4">Meka Butler as <span className="black-40">Claire</span></p>
-      <p className="lh-copy black f3 mb4">Se Marie as <span className="black-40">Monica</span></p>
-      <p className="lh-copy black f3 mb4">Linda Kanyarusoke as <span className="black-40">Chris</span></p>
-      <p className="lh-copy black f3 mb4">Suzanne Sadler as <span className="black-40">Susan</span></p>
-      <p className="lh-copy black f3 mb4">Russell Hawkins as <span className="black-40">Ike</span></p>
-      <p className="lh-copy black f3 mb4">Dan McCurry as <span className="black-40">Matthew</span></p>
-      <p className="lh-copy black f3 mb4">Matthew Wallenstein as <span className="black-40">Michael</span></p>
-      <p className="lh-copy black f3 mb4">Sarah Brunner as <span className="black-40">Tristan</span></p>
-      <p className="lh-copy black f3 mb4">Bruce Crocker as <span className="black-40">Senator Wyatt</span></p>
+      <p className="lh-copy black f3 mb4">Meka Butler as <i className="black-60">Claire</i></p>
+      <p className="lh-copy black f3 mb4">Sé Marie as <i className="black-60">Monica</i></p>
+      <p className="lh-copy black f3 mb4">Linda Kanyarusoke as <i className="black-60">Chris</i></p>
+      <p className="lh-copy black f3 mb4">Suzanne Sadler as <i className="black-60">Susan</i></p>
+      <p className="lh-copy black f3 mb4">Russell Hawkins as <i className="black-60">Ike</i></p>
+      <p className="lh-copy black f3 mb4">Dan McCurry as <i className="black-60">Matthew</i></p>
+      <p className="lh-copy black f3 mb4">Matthew Wallenstein as <i className="black-60">Michael</i></p>
+      <p className="lh-copy black f3 mb4">Sarah Brunner as <i className="black-60">Tristan</i></p>
+      <p className="lh-copy black f3 mb4">Bruce Crocker as <i className="black-60">Senator Wyatt</i></p>
     </div>
   </div>
   <div className="credits-section flex-l items-start content-start justify-between mt5">
