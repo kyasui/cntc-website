@@ -25,7 +25,7 @@ export default class AboutPage extends React.Component {
               <img src={withPrefix('/img/main-poster.jpg')} />
             </div>
             <div className="w-100 w-50-l pa5-l flex-l items-center content-center justify-center">
-              <h3 className="f2 lh-copy black">Careful Not to Cry is the feature debut of writer/director Erik Sutch.</h3>
+              <h3 className="f2 lh-copy black">Careful Not to Cry is the feature debut of director Erik Sutch.</h3>
             </div>
           </div>
 

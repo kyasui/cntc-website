@@ -7,15 +7,15 @@ const Credits = () => (
       <p className="lh-copy black f3 dib section-title mb4 mb0-l">Cast</p>
     </div>
     <div className="w-100 w-70-l pa5-l">
-      <p className="lh-copy black f3 mb4">Meka Butler as Claire</p>
-      <p className="lh-copy black f3 mb4">Se Marie as Monica</p>
-      <p className="lh-copy black f3 mb4">Linda Kanyarusoke as Chris</p>
-      <p className="lh-copy black f3 mb4">Suzanne Sadler as Susan</p>
-      <p className="lh-copy black f3 mb4">Russell Hawkins as Ike</p>
-      <p className="lh-copy black f3 mb4">Dan McCurry as Matthew</p>
-      <p className="lh-copy black f3 mb4">Matthew Wallenstein as Michael</p>
-      <p className="lh-copy black f3 mb4">Sarah Brunner as Tristan</p>
-      <p className="lh-copy black f3 mb4">Bruce Crocker as Senator Wyatt</p>
+      <p className="lh-copy black f3 mb4">Meka Butler as <span className="black-40">Claire</span></p>
+      <p className="lh-copy black f3 mb4">Se Marie as <span className="black-40">Monica</span></p>
+      <p className="lh-copy black f3 mb4">Linda Kanyarusoke as <span className="black-40">Chris</span></p>
+      <p className="lh-copy black f3 mb4">Suzanne Sadler as <span className="black-40">Susan</span></p>
+      <p className="lh-copy black f3 mb4">Russell Hawkins as <span className="black-40">Ike</span></p>
+      <p className="lh-copy black f3 mb4">Dan McCurry as <span className="black-40">Matthew</span></p>
+      <p className="lh-copy black f3 mb4">Matthew Wallenstein as <span className="black-40">Michael</span></p>
+      <p className="lh-copy black f3 mb4">Sarah Brunner as <span className="black-40">Tristan</span></p>
+      <p className="lh-copy black f3 mb4">Bruce Crocker as <span className="black-40">Senator Wyatt</span></p>
     </div>
   </div>
   <div className="credits-section flex-l items-start content-start justify-between mt5">
@@ -23,7 +23,7 @@ const Credits = () => (
       <p className="lh-copy black f3 dib section-title mb4 mb0-l">Crew</p>
     </div>
     <div className="w-100 w-70-l pa5-l">
-      <p className="lh-copy black f3 mb4"><span className="label">Written and Directed</span><br />by Erik Sutch</p>
+      <p className="lh-copy black f3 mb4"><span className="label">Written and Directed by</span><br />Erik Sutch</p>
 
       <p className="lh-copy black f3 mb4"><span className="label">Executive Producer</span><br />Shawn Petersen</p>
       
@@ -41,6 +41,8 @@ const Credits = () => (
       Josef Leimberg “Spirits of the Ancestors”<br />
       Mary Brulatour “Rabbit Mask”<br />
       Moses Sumney “Lonely World”</p>
+
+      <p className="lh-copy black f3 mb4"><span className="label">Artwork</span><br /><a target="_blank" href="http://www.izzyjarvis.com/">Izzy Jarvis</a></p>
 
       <p className="lh-copy black f3 mb4"><span className="label">Website</span><br /><a target="_blank" href="https://keiyasui.com">Kei Yasui</a></p>
     </div>
