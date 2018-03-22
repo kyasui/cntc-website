@@ -5,7 +5,7 @@ import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
 
 const Navbar = () => (
-  <div className="nav-wrap absolute left-0 right-0 top-0 z-1">
+  <div className="nav-wrap absolute left-0 right-0 top-0 z-2">
     <nav className="flex items-center content-center justify-start-l justify-between fluid-width center pv2">
       <Link
         exact

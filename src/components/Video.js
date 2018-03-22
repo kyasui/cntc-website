@@ -18,7 +18,7 @@ class Video extends React.Component {
 
   render() {
     return(
-      <div className={"aspect-ratio--object z-1 overflow-hidden splash-video"  + (this.state.shouldShow ? ' is-active' : '')}>
+      <div className={"aspect-ratio--object z-1 overflow-hidden relative splash-video"  + (this.state.shouldShow ? ' is-active' : '')}>
         <div className="bg-black-40 absolute--fill absolute z-2"></div>
         <video
           ref={node => this.video = node}

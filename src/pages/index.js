@@ -51,7 +51,7 @@ export default class IndexPage extends React.Component {
     });
 
     return (
-      <section className="section">
+      <section className="section bg-white z-1 relative">
         <div className="vh-100 relative z-0 bg-black">
           <Video />
           <div className="fluid-width absolute absolute--fill center flex items-center content-center justify-start-l justify-center z-2 tc tl-l">
@@ -74,7 +74,7 @@ export default class IndexPage extends React.Component {
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={() => this.handleScriptLoad()}
         />
-        <div className="container pv5 bg-blue">
+        <div className="container pv5 bg-blue relative z-1">
           <div className="fluid-width center">
             <p className="lh-copy white f2-l f3 tc mt5">Upcoming Screenings</p>
 
@@ -93,10 +93,11 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="fluid-width center">
-          <Synopsis />
-          <Credits />
-
+        <div className="bg-white relative z-1">
+          <div className="fluid-width center cf">
+            <Synopsis />
+            <Credits />
+          </div>
         </div>
       </section>
     );

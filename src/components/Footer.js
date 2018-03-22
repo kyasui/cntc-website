@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 const Footer = () => (
-  <div className="footer-wrap pv3">
+  <div className="footer-wrap pv3 relative z-1">
     <div className="flex items-center content-center justify-between fluid-width center">
       <div className="socials">
         <a className="white f5 mr3" target="_blank" href="https://instagram.com/carefulnottocry">Instagram</a>

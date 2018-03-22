@@ -16,7 +16,7 @@ class TemplateWrapper extends React.Component {
   render() {
     let pageClass = (this.props.location.pathname !== '/') ? this.props.location.pathname.substring(1) : 'home';
     let navClass = (this.props.location.pathname !== '/') ? 'solid' : '';
-    return(<div className={`${pageClass} ${navClass}`}>
+    return(<div className={`${pageClass} ${navClass} bg-white`}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Careful Not to Cry | A Film by Erik Sutch</title>
