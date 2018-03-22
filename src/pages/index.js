@@ -51,7 +51,7 @@ export default class IndexPage extends React.Component {
     });
 
     return (
-      <section className="section bg-white z-1 relative">
+      <section className="section bg-white">
         <div className="vh-100 relative z-0 bg-black">
           <Video />
           <div className="fluid-width absolute absolute--fill center flex items-center content-center justify-start-l justify-center z-2 tc tl-l">
@@ -63,13 +63,6 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        {this.state.shouldShowVideoOverlay ? (
-          <Modal toggleModal={this.toggleVideoOverlay}>
-            <div className="aspect-ratio aspect-ratio--16x9 relative w-100 mw8 center z-9999">
-              <iframe className="aspect-ratio--object" src="https://www.youtube.com/embed/f8hbWs2tm8I" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-            </div>
-          </Modal>
-        ) : null}
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={() => this.handleScriptLoad()}
@@ -99,6 +92,13 @@ export default class IndexPage extends React.Component {
             <Credits />
           </div>
         </div>
+        {this.state.shouldShowVideoOverlay ? (
+          <Modal toggleModal={this.toggleVideoOverlay}>
+            <div className="aspect-ratio aspect-ratio--16x9 relative w-100 mw8 center z-9999">
+              <iframe className="aspect-ratio--object" src="https://www.youtube.com/embed/f8hbWs2tm8I" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+            </div>
+          </Modal>
+        ) : null}
       </section>
     );
   }
