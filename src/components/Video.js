@@ -24,8 +24,8 @@ class Video extends React.Component {
           ref={node => this.video = node}
           className="of-cover z-1 relative"
           type="video/mp4"
-          playsinline
-          autoplay
+          playsInline
+          autoPlay
           muted
           loop>
           <source src={withPrefix('/video/landing.mp4')} type="video/mp4" />
