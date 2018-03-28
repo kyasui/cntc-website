@@ -23,7 +23,8 @@ class Video extends React.Component {
         <video
           ref={node => this.video = node}
           className="of-cover z-1 relative"
-          playsInline
+          type="video/mp4"
+          playsinline
           autoplay
           muted
           loop>
