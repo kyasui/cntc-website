@@ -26,11 +26,11 @@ class TemplateWrapper extends React.Component {
         <link rel="shortcut icon" type="image/x-icon" href={withPrefix('/img/favicon.ico')} />
         <meta
           property="og:description"
-          content="Careful Not to Cry is the feature debut of writer/director Erik Sutch."
+          content="Careful Not to Cry is the feature debut of director Erik Sutch."
         />
         <meta
           name="description"
-          content="Careful Not to Cry is the feature debut of writer/director Erik Sutch.."
+          content="Careful Not to Cry is the feature debut of director Erik Sutch.."
         />
         <meta property="og:title" content="Careful Not to Cry | A Film by Erik Sutch" />
         <meta property="og:url" content="https://carefulnottocry.com" />
