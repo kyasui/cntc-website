@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
 
 export const ScreeningTemplate = ({
-  content, contentComponent, title, helmet, venue, location, link, poster
+  content, contentComponent, title, helmet, venue, location, link
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -18,8 +18,6 @@ export const ScreeningTemplate = ({
             <p>{venue}</p>
             <p>{location}</p>
             <p>{link}</p>
-            <p>{poster}</p>
-            <PostContent content={content} />
           </div>
         </div>
       </div>
@@ -38,7 +36,6 @@ export default ({ data }) => {
     venue={post.frontmatter.venue}
     location={post.frontmatter.location}
     link={post.frontmatter.link}
-    poster={post.frontmatter.poster}
   />);
 };
 

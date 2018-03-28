@@ -15,5 +15,5 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "screening"}
       - {label: "Venue", name: "venue", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
+      - {label: "Link", name: "link", widget: "string", default: "false"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Link", name: link, widget: "string", default: "false"}

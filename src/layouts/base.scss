@@ -4,10 +4,14 @@
 body {
   // font-family: 'Authentic Sans';
   // font-family: "MS PGothic", arial, sans-serif;
-  font-family: "MS PGothic", arial, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // letter-spacing: 0.2px;
+}
+
+.black {
+  color: #111;
 }
 
 h1,
@@ -20,6 +24,15 @@ p {
   font-weight: normal;
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
 a {
@@ -40,6 +53,7 @@ a {
   padding: 21px 25px 19px;
   display: inline-block;
   transition: all 0.2s;
+  font-weight: 700;
 }
 
 .blue-button {
@@ -180,4 +194,12 @@ a {
 .label {
   font-size: 14px;
   opacity: 0.6;
+}
+
+input {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.screening-title {
+  line-height: 1.8;
 }

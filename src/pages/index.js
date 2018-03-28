@@ -75,10 +75,10 @@ export default class IndexPage extends React.Component {
               <div className="mw7 center pa5">
                 {futureScreenings.length ? futureScreenings.map(({ node: post }, index) => {
                   return(<div key={`future-screening-${index}`} className="screening mb5">
-                    <h4 className="lh-copy white f7">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</h4>
-                    <h2 className="lh-copy white f3">{post.frontmatter.venue}</h2>
-                    <h3 className="lh-copy white f7">{post.frontmatter.location}</h3>
-                    {post.frontmatter.link ? (<a className="lh-copy white-90 f7 mt3 dib ttu" target="_blank" href={post.frontmatter.link}>View Info →</a>) : null}
+                    <p className="lh-copy white f6">{format(new Date(post.frontmatter.date), 'MM/DD/YYYY')}</p>
+                    <h2 className="lh-copy white f3 screening-title">{post.frontmatter.venue}</h2>
+                    <p className="lh-copy white f6">{post.frontmatter.location}</p>
+                    {post.frontmatter.link !== 'false' ? (<a className="lh-copy white-90 f7 mt3 dib ttu dim" target="_blank" href={post.frontmatter.link}>View link →</a>) : null}
                   </div>);
                 }) : (<h4 className="white-50 f4 tc">None At This Time</h4>)}
 

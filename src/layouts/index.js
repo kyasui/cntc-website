@@ -36,6 +36,7 @@ class TemplateWrapper extends React.Component {
         <meta property="og:url" content="https://carefulnottocry.com" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={withPrefix('/img/share-image.png')} />
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" />
       </Helmet>
       <Navbar />
       {this.props.children()}
