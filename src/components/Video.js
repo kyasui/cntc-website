@@ -14,6 +14,15 @@ class Video extends React.Component {
         shouldShow: true
       });
     };
+
+    setTimeout(() => {
+      if (!this.state.shouldShow) {
+        this.video.play();
+        this.setState({
+          shouldShow: true
+        });
+      }
+    }, 1000);
   }
 
   render() {
