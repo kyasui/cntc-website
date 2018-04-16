@@ -3,7 +3,7 @@ import { ScreeningTemplate } from '../../templates/screening';
 
 const ScreeningPreview = ({ entry, widgetFor }) => (
   <ScreeningTemplate
-    content={widgetFor('body')}
+    // content={widgetFor('body')}
     description={entry.getIn(['data', 'description'])}
     title={entry.getIn(['data', 'title'])}
   />
