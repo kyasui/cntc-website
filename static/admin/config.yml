@@ -13,6 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "screening"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Venue", name: "venue", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Link", name: "link", widget: "string", default: "false"}
